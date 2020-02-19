@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const nativescript_vue_1 = require("@nivinjoseph/nativescript-vue");
+const n_nativescript_vue_1 = require("n-nativescript-vue");
 class MobileApp {
     bootstrap() {
-        const s = new nativescript_vue_1.default({
+        const s = new n_nativescript_vue_1.default({
             template: `
                         <Frame>
                         <Page>

@@ -7,7 +7,8 @@ class MobileApp {
             template: `
                         <Frame>
                         <Page>
-                            <Label text="Hello Nivin"/>
+                            <Label v-if="true" text="Hello Nivin"/>
+                            <Label v-else text="Hello Shrey"/>
                         </Page>
                         </Frame>
                     `

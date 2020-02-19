@@ -9,7 +9,7 @@ export class MobileApp
             template: `
                         <Frame>
                         <Page>
-                            <Label text="Hello world"/>
+                            <Label text="Hello Nivin"/>
                         </Page>
                         </Frame>
                     `

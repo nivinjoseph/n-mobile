@@ -45,6 +45,7 @@
         "vue": "2.6.10"
     },
     "dependencies": {
+        "@nivinjoseph/n-config": "^1.0.25",
         "@nivinjoseph/n-defensive": "^1.0.28",
         "@nivinjoseph/n-exception": "^1.0.19",
         "@nivinjoseph/n-ext": "^1.1.10",

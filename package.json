@@ -1,0 +1,54 @@
+{
+    "name": "n-mobile",
+    "version": "1.0.0",
+    "description": "Mobile application framework using Nativescript and Vue",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "ts-compile": "tsc -p .",
+        "ts-lint": "tslint -p . -c tslint.json",
+        "ts-build": "npm run ts-compile && npm run ts-lint",
+        "ts-build-dist": "npm run ts-build && tsc -p ./dist",
+        "clean-src": "find ./src -name '*.js' -delete -o -name '*.map' -delete",
+        "clean-test": "find ./test -name '*.js' -delete -o -name '*.map' -delete",
+        "clean-dist": "find ./dist -name '*.js' -delete -o -name '*.map' -delete -o -name '*.ts' -delete",
+        "clean-all": "npm run clean-src && npm run clean-test && npm run clean-dist",
+        "pretest": "npm run ts-build",
+        "test": "mocha --reporter spec --ui tdd --require ts-node/register './test/**/*.test.js' || true",
+        "pretest-ci": "npm run pretest",
+        "test-ci": "mocha --reporter spec --ui tdd --require ts-node/register './test/**/*.test.js'",
+        "publish-package": "npm run ts-build-dist && git add . && git commit -m 'preparing to publish new version' && npm version patch && git push && npm publish --access=public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nivinjoseph/n-mobile.git"
+    },
+    "keywords": [
+        "mobile",
+        "nativescript",
+        "vue"
+    ],
+    "author": "NiviN",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/nivinjoseph/n-mobile/issues"
+    },
+    "homepage": "https://github.com/nivinjoseph/n-mobile#readme",
+    "devDependencies": {
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.12.17",
+        "mocha": "^6.2.2",
+        "ts-node": "^8.5.4",
+        "tslint": "^5.20.1",
+        "typescript": "^3.7.3",
+        "typescript-tslint-plugin": "^0.5.5"
+    },
+    "dependencies": {
+        "@nivinjoseph/n-defensive": "^1.0.28",
+        "@nivinjoseph/n-exception": "^1.0.19",
+        "@nivinjoseph/n-ext": "^1.1.10",
+        "@nivinjoseph/n-ject": "^1.1.9",
+        "@nivinjoseph/nativescript-vue": "^2.4.1",
+        "reflect-metadata": "^0.1.13"
+    }
+}

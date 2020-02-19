@@ -1,6 +1,6 @@
 {
     "name": "n-mobile",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Mobile application framework using Nativescript and Vue",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",

@@ -1,4 +1,4 @@
-import Vue from "@nivinjoseph/nativescript-vue";
+import Vue from "n-nativescript-vue";
 
 
 export class MobileApp
